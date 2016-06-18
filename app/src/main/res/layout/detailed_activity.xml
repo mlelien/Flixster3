@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#2F3030"
+>
+
+
+<ImageView
+    android:layout_width="155dp"
+    android:layout_height="248dp"
+    android:id="@+id/ivMovieImage"
+    android:layout_marginRight="10dp"
+    tools:src="@android:mipmap/sym_def_app_icon"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    tools:text="X-Men: Apocalypse"
+    android:id="@+id/tvTitle"
+    android:layout_gravity="center_horizontal"
+    android:textSize="26sp"
+    android:textColor="#ffffff"
+    android:layout_alignParentTop="true"
+    android:layout_toRightOf="@+id/ivMovieImage"
+    android:paddingTop="10dp"/>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_below="@id/ivMovieImage"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvOverview"
+            android:textColor="#B8B8B8"
+            android:paddingRight="4dp"
+            android:paddingLeft="4dp"
+            tools:text="Since the dawn of civilization, he was worshipped as a god. Apocalypse, the first and most powerful mutant from Marvel’s X-Men universe, amassed the powers of many other mutants, becoming immortal and invincible. Upon awakening after thousands of years, he is disillusioned with the world as he finds it and recruits a team of powerful mutants, including a disheartened Magneto, to cleanse mankind and create a new world order, over which he will reign. As the fate of the Earth hangs in the balance, Raven with the help of Professor X must lead a team of young X-Men to stop their greatest nemesis and save mankind from complete destruction."
+            android:layout_below="@+id/tvTitle"
+            android:layout_toRightOf="@+id/ivMovieImage"
+            android:layout_toEndOf="@+id/ivMovieImage" />
+    </ScrollView>
+
+    <RatingBar
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ratingBar"
+        android:numStars="10"
+        android:rating="9"
+        android:layout_below="@+id/tvTitle"
+        android:layout_toRightOf="@+id/ivMovieImage"
+        android:layout_toEndOf="@+id/ivMovieImage"/>
+
+    <ProgressBar
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressBar"
+        android:layout_below="@+id/ratingBar"
+        android:layout_alignLeft="@+id/ratingBar"
+        android:layout_alignStart="@+id/ratingBar"
+        android:max="30"
+        android:indeterminate="false"
+        android:progress="15" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popularity Bar"
+        android:textColor="@color/unselectedStars"
+        android:id="@+id/textView"
+        android:layout_below="@+id/progressBar"
+        android:layout_alignLeft="@+id/progressBar"
+        android:layout_alignStart="@+id/progressBar" />
+
+</RelativeLayout>
